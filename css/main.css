@@ -295,6 +295,7 @@ body {
   padding: 1rem 2.5rem;
   color: #f8f3f0;
   cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   font-size: 1.6rem;
   font-weight: 600;
 }
