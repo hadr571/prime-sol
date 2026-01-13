@@ -1,0 +1,49 @@
+.footer {
+    // background-image: url(../../../images/svg/leaves-bg-light.svg);
+    background-color: $color-primary;
+    padding: 5rem 0;
+    position: relative;
+    z-index: 9;
+
+    &--margin-top-on-phone {
+        @include respond(phone) {
+            margin-top: 74px;
+        }
+    }
+
+    //for the radial shadow affect
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(/images/svg/Shadow.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+
+    .footer-container {
+        &__text,
+        .paragraph.paragraph--light {
+            font-size: 1.6rem;
+            //   font-weight: 400;
+        }
+
+        &__text {
+            line-height: 1.35;
+            a {
+                color: $color-white;
+                text-decoration: none;
+            }
+        }
+
+        .paragraph.paragraph--light {
+            opacity: 0.8;
+            padding-inline: 1rem;
+        }
+    }
+}

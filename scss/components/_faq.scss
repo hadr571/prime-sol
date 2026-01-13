@@ -1,0 +1,77 @@
+.faq {
+    &__item {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 2rem 0;
+        overflow-y: hidden;
+        scrollbar-width: none;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba($color-black, 0.22);
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        @include respond(phone) {
+            width: 95%;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        transition: all 0.15s ease-in;
+
+        &--add-margin {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__question {
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__icon {
+        width: 1.2rem;
+        margin-left: 5rem;
+        transition: all 0.15s ease-in;
+
+        &--rotate {
+            transform: rotate(180deg);
+        }
+
+        @include respond(phone) {
+            margin-left: 2.5rem;
+        }
+    }
+
+    &__answer {
+        opacity: 0;
+        height: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+        transition: all 0.15s ease-in;
+
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        font-weight: 400;
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+        }
+    }
+}

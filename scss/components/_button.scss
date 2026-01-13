@@ -1,0 +1,37 @@
+.btn {
+    border: none;
+    background-color: $color-accent;
+    border-radius: 100rem;
+    padding: 1rem 2.5rem;
+    color: $color-light;
+    cursor: pointer;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    &:hover {
+        background-color: $color-accent-hover;
+    }
+
+    @include respond(phone) {
+        padding: 1rem 2rem;
+        justify-content: center;
+    }
+
+    &--fill-width {
+        width: 100%;
+    }
+
+    &--large {
+        padding: 1.5rem 4rem;
+        border-radius: 100rem;
+
+        & .btn__text {
+            font-size: 2.2rem;
+
+            @include respond(phone) {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}

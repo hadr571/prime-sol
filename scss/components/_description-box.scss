@@ -1,0 +1,50 @@
+.description-box {
+    width: 41rem;
+
+    @include respond(tab-port) {
+        width: 50rem;
+        text-align: center;
+    }
+
+    @include respond(phone) {
+        width: 95%;
+    }
+
+    &--align-left .paragraph {
+        @include respond(tab-port) {
+            text-align: left;
+        }
+    }
+
+    &--add-padding {
+        padding: 0 2rem;
+
+        @include respond(phone) {
+            padding: 0;
+        }
+    }
+
+    &--add-padding-on-phone {
+        @include respond(phone) {
+            padding: 0 1rem;
+        }
+    }
+
+    &--small {
+        width: 25rem;
+
+        @include respond(tab-port) {
+            width: 30rem;
+        }
+
+        @include respond(phone) {
+            width: 95%;
+        }
+    }
+
+    &--full-width-on-phone {
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+}

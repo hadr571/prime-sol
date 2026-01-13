@@ -1,0 +1,91 @@
+.row {
+    max-width: 114rem;
+    margin: auto;
+
+    @include respond(phone) {
+        padding: 0 2rem;
+    }
+
+    &--padding-small-on-phone {
+        padding: 0 1rem;
+    }
+
+    &--no-padding-on-phone {
+        padding: 0;
+    }
+
+    &--medium {
+        max-width: 90rem;
+    }
+
+    &--small {
+        max-width: 50rem;
+    }
+
+    &--3-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+
+    &--2-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10rem;
+
+        @include respond(tab-land) {
+            gap: 5rem;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+
+    &--no-collapse {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    &--align-to-top {
+        align-items: flex-start;
+
+        @include respond(tab-port) {
+            align-items: center;
+        }
+    }
+
+    &--col-gap-5 {
+        gap: 5rem;
+
+        @include respond(phone) {
+            gap: 3rem;
+        }
+    }
+
+    &--col-gap-3 {
+        gap: 3rem;
+    }
+
+    &--small-col-gap-2 {
+        gap: 2rem;
+
+        @include respond(phone) {
+            gap: 1.5rem;
+        }
+    }
+
+    &--small-col-gap-1 {
+        gap: 1rem;
+    }
+
+    &--small-col-gap-none {
+        gap: 0;
+    }
+}

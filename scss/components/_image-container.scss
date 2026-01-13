@@ -1,0 +1,117 @@
+.image-container {
+    max-width: 38rem;
+    overflow: hidden;
+    border-radius: 3rem;
+
+    // position: relative;
+
+    @include respond(tab-port) {
+        max-width: 32rem;
+        margin: 0 auto 2rem auto;
+    }
+
+    &--with-info {
+        @include respond(tab-port) {
+            margin-bottom: 10rem;
+        }
+    }
+
+    &--small {
+        width: 33rem;
+
+        // This will select the info-box only for this image-container
+        & > div {
+            padding: 1rem;
+            width: 25rem;
+        }
+    }
+
+    &--extra-small {
+        width: 27rem;
+    }
+
+    &--small-on-phone {
+        margin: 0;
+
+        @include respond(phone) {
+            width: 30rem;
+        }
+    }
+
+    &--extra-small-on-phone {
+        margin: 0;
+
+        @include respond(phone) {
+            width: 20rem;
+        }
+    }
+
+    &--remove-on-tab-port {
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        filter: drop-shadow(0 0 1rem rgba($color-black, 0.4));
+
+        &--less-shadow {
+            filter: drop-shadow(0 0 1.5rem rgba($color-black, 0.2));
+        }
+    }
+
+    &__info-box {
+        padding: 1.5rem;
+        background-color: $color-beige;
+        border-radius: 2rem;
+        width: 27rem;
+        box-shadow: 1rem 1.5rem 2rem rgba($color-black, 0.25);
+
+        position: absolute;
+        bottom: -4rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__hand-box {
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba($color-black, 0.1);
+        display: inline-block;
+        border-radius: 1rem;
+        margin-right: 1.5rem;
+
+        position: relative;
+    }
+
+    &__hand {
+        width: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $color-dark-2;
+        font-family: $font-family-secondary;
+        text-align: left;
+    }
+
+    &__about {
+        font-size: $default-font-size;
+        font-weight: 300;
+        color: rgba($color-dark-2, 0.8);
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+    }
+}

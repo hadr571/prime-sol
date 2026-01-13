@@ -1,0 +1,240 @@
+.footer-container-detailed {
+    width: 80rem;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+        width: 45rem;
+    }
+
+    @include respond(phone) {
+        margin-top: 1.5rem;
+        width: 90%;
+    }
+
+    &__logo-link {
+        display: block;
+        text-decoration: none;
+        width: 20rem;
+        margin-bottom: 2.5rem;
+
+        @include respond(phone) {
+            width: 13rem;
+            margin: 0 auto 4rem auto;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__info-box {
+        margin-bottom: 3.5rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include respond(tab-port) {
+            gap: 5rem;
+            justify-content: flex-start;
+        }
+
+        @include respond(phone) {
+            width: 28rem;
+            display: block;
+            margin: 0 auto 3.5rem auto;
+        }
+    }
+
+    &__info-item {
+        max-width: 30%;
+
+        @include respond(phone) {
+            max-width: 100%;
+            margin-bottom: 5rem;
+        }
+
+        &:last-of-type {
+            margin-left: 2rem;
+            position: relative;
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        & ul {
+            list-style: none;
+
+            font-size: 1.5rem;
+            font-weight: 300;
+
+            & > li {
+                margin-top: 1rem;
+
+                & > a {
+                    text-decoration: none;
+                    color: rgba($color-white, 0.8);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $color-white;
+
+        @include respond(phone) {
+            margin-bottom: 1rem;
+            font-size: 2.6rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: rgba($color-white, 0.8);
+        margin-top: 1rem;
+
+        a {
+            color: rgba($color-white, 0.8);
+        }
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            a {
+                font-weight: 400;
+            }
+
+            &.subp {
+                font-weight: 400;
+                color: rgba($color-white, 0.7);
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 6px;
+        }
+
+        & span:first-of-type {
+            @include respond(phone) {
+                font-weight: 600;
+            }
+        }
+
+        & span:last-of-type {
+            @include respond(phone) {
+                display: none;
+            }
+        }
+    }
+
+    &__icon-link {
+        display: inline-block;
+        width: 2.4rem;
+        text-decoration: none;
+
+        @include respond(phone) {
+            width: 4rem;
+        }
+
+        &:not(:last-of-type) {
+            margin-right: 5px;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+    }
+
+    &__badge-content {
+        text-align: center;
+        width: 80%;
+
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__badge-heading {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $color-light;
+    }
+
+    &__badge-text {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: rgba($color-light, 0.7);
+    }
+
+    &__navigation {
+        list-style: none;
+        margin-bottom: 8rem;
+
+        display: flex;
+        gap: 3rem;
+
+        @include respond(phone) {
+            width: 28rem;
+            display: block;
+            margin: 0 auto 3.5rem auto;
+        }
+    }
+
+    &__navigation-heading {
+        display: none;
+
+        @include respond(phone) {
+            display: block;
+            margin-bottom: 1rem;
+            font-size: 2.6rem;
+            font-weight: 500;
+            color: $color-white;
+        }
+    }
+
+    // &__navigation-item {
+    //     display: inline-block;
+    // }
+
+    &__link {
+        &,
+        &:visited {
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: $color-light;
+
+            @include respond(phone) {
+                display: block;
+                margin-bottom: 1rem;
+                font-size: 2.2rem;
+                font-weight: 300;
+                color: rgba($color-white, 0.8);
+            }
+        }
+
+        &--current {
+            &,
+            &:visited {
+                opacity: 80%;
+            }
+        }
+    }
+
+    &__copy-right {
+        font-size: $default-font-size;
+        font-weight: 400;
+        color: $color-grey-dark-2;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+}

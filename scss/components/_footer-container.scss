@@ -1,0 +1,46 @@
+.footer-container {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+
+    @include respond(tab-land) {
+        width: 50%;
+    }
+
+    @include respond(tab-port) {
+        width: 60%;
+    }
+
+    @include respond(phone) {
+        width: 80%;
+    }
+
+    &__image {
+        width: 10rem;
+        margin-bottom: 1rem;
+
+        @include respond(tab-port) {
+            width: 13rem;
+        }
+    }
+
+    &__info {
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: rgba($color-white, 0.9);
+        margin-bottom: 0.5rem;
+
+        @include respond(tab-port) {
+            font-size: 2rem;
+        }
+
+        &:first-child {
+            font-weight: 300;
+            color: rgba($color-white, 0.7);
+        }
+    }
+}

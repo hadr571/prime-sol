@@ -1,0 +1,121 @@
+.social-proof-pill {
+    padding: 6px 12px 6px 12px;
+    border-radius: 10rem;
+    background-color: rgba($color-white, 0.1);
+
+    display: inline-flex;
+    align-items: center;
+
+    &--transparent {
+        background-color: transparent;
+    }
+
+    &--small {
+        padding: 4px 10px 4px 6px;
+
+        & .social-proof-pill__rating {
+            width: 6rem;
+        }
+
+        & .social-proof-pill__text {
+            @include respond(phone) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &--large {
+        flex-direction: column;
+        padding: 0 3rem;
+        margin-bottom: 4rem;
+
+        & .social-proof-pill__composition {
+            margin: 0 0 6px 0;
+        }
+
+        & .social-proof-pill__photo {
+            width: 3.3rem;
+            height: 3.3rem;
+            box-shadow: 0 0 0.6rem rgba($color-black, 0.8);
+
+            &:not(:first-child) {
+                margin-left: -6px;
+            }
+        }
+    }
+
+    &__composition {
+        margin-right: 1rem;
+
+        display: flex;
+        align-items: center;
+
+        @include respond(phone) {
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__photo {
+        display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 100%;
+        box-shadow: 0 0 0.6rem rgba($color-black, 0.6);
+
+        &:not(:first-child) {
+            margin-left: -0.5rem;
+        }
+
+        @include respond(phone) {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+    }
+
+    &__rating {
+        width: 7rem;
+        margin: 0 5px;
+
+        @include respond(phone) {
+            margin: 0 5px;
+        }
+    }
+
+    &__text {
+        font-size: 1.3rem;
+        color: rgba($color-white, 0.8);
+        font-weight: 400;
+
+        &--dark {
+            color: rgba($color-black, 0.8);
+        }
+
+        &--bold {
+            font-weight: 700;
+        }
+
+        &--remove-for-phone {
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &--add-for-phone {
+            display: none;
+
+            @include respond(phone) {
+                display: inline;
+            }
+        }
+
+        @include respond(phone) {
+            font-size: 1.5rem;
+        }
+
+        &--small {
+            @include respond(phone) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

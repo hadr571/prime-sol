@@ -1,0 +1,38 @@
+.section-services {
+    background-color: $color-light;
+    padding: 8rem 0;
+
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
+}
+
+.section-products {
+    background-color: $color-beige;
+    padding: 8rem 0;
+
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
+}
+
+.section-office-environment {
+    background-image: url(../../img/office-environment.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem 0;
+
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
+}
+
+.section-phylosophy {
+    background-color: $color-light;
+    padding: 8rem 0;
+
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
+}
